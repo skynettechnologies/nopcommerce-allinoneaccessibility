@@ -106,7 +106,7 @@ It uses the accessibility interface which handles UI and design related adjustme
 
 ## Configurations
 
-After downloading the [!extension (https://www.nopcommerce.com/en/extensions)], You can configure All in One Accessibility via Admin:
+After downloading the [extension] (https://www.nopcommerce.com/en/extensions), You can configure All in One Accessibility via Admin:
 
 ```
 Admin > Configuration >Local Plugin > All in One Accessibility
