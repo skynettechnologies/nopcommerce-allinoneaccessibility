@@ -1,0 +1,71 @@
+﻿@using Nop.Services
+@model ConfigurationModel
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="AllinOneAccessibility" asp-action="Configure" method="post">
+    <div class="cards-group">
+        <div class="card card-default">
+            <div class="card-body">
+                <p>
+                    Please find more info about <a href="https://www.skynettechnologies.com/all-in-one-accessibility" target="_blank">All in One Accessibility</a>.<br />
+                    Use of the All in One Accessibility service is governed by the <a href="https://www.skynettechnologies.com/terms-conditions" target="_blank">license agreement</a>.<br />
+                </p>
+                <hr />
+               
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ApiKey" />
+                    </div>
+                    <div class="col-md-3">
+                        <nop-editor asp-for="ApiKey" />
+                        <span asp-validation-for="ApiKey"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="Color" />
+                    </div>
+                    <div class="col-md-3">
+                        <nop-editor asp-for="Color" />
+                        <span asp-validation-for="Color"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="Position" />
+                    </div>
+                    <div class="col-md-3">
+                        <nop-select asp-for="Position" asp-items="@await (((Nop.Plugin.Widgets.AllinOneAccessibility.Data.PositionType)Model.Position).ToSelectListAsync())" />
+                        <span asp-validation-for="Position"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="IconType" />
+                    </div>
+                    <div class="col-md-3">
+                        <nop-select asp-for="IconType" asp-items="@await (((Nop.Plugin.Widgets.AllinOneAccessibility.Data.IconTypes)Model.IconType).ToSelectListAsync())" />
+                        <span asp-validation-for="IconType"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="IconSize" />
+                    </div>
+                    <div class="col-md-3">
+                        <nop-select asp-for="IconSize" asp-items="@await (((Nop.Plugin.Widgets.AllinOneAccessibility.Data.IconSizes)Model.IconSize).ToSelectListAsync())" />
+                        <span asp-validation-for="IconSize"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-9 offset-md-3">
+                        <input type="submit" class="btn btn-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

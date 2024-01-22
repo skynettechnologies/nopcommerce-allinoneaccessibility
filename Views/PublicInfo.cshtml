@@ -1,0 +1,32 @@
+﻿@using System.Collections
+@model ConfigurationModel
+@{
+    Layout = "";
+    var positionArr = new Dictionary<int,string>
+            {
+                {0, "top_left"},
+                {1, "top_center"},
+                {2, "top_right"},
+                {3, "middel_left"},
+                {4, "middel_right"},
+                {5, "bottom_left"},
+                {6, "bottom_center"},
+                {7, "bottom_right"},
+            };
+
+    var position = Model.Position;
+    var iconTypeArr = new Dictionary<int, string>
+            {
+                {0, "aioa-icon-type-1"},
+                {1, "aioa-icon-type-2"},
+                {2, "aioa-icon-type-3"}
+               
+            };
+
+    var icontype = Model.IconType;
+}
+ 
+   <!script id="aioa-adawidget" src='https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#@Model.Color&token=@Model.ApiKey&position=@positionArr[position].@iconTypeArr[icontype]'></!script>
+   <script>
+    console.info('@positionArr[position]');
+   </script>
