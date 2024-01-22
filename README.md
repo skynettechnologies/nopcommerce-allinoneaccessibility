@@ -36,8 +36,8 @@ It uses the accessibility interface which handles UI and design related adjustme
 - Choose Application Position
 - Multi Language
 
-#### Supports 65 languages
-- English
+#### Supports 140+ languages
+- English(US)
 - Italian
 - French
 - German
@@ -101,7 +101,7 @@ It uses the accessibility interface which handles UI and design related adjustme
 - Persian
 - Punjabi
 - Spanish (Mexico)
-- United Kingdom
+- English(United Kingdom)
 
 
 ## Configurations
