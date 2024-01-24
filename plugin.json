@@ -3,8 +3,8 @@
   "FriendlyName": "All In one Accessibility",
   "SystemName": "Widgets.AllinOneAccessibility",
   "Version": "1.03",
-  "SupportedVersions": [ "4.60" ],
-  "Author": "nopCommerce team",
+  "SupportedVersions": [ "4.60","4.50" ],
+  "Author": "Skynet Technologies",
   "DisplayOrder": 1,
   "FileName": "Nop.Plugin.Widgets.AllinOneAccessibility.dll",
   "Description": "This plugin enables integration with All in One Accessibility Widget"
